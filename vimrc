@@ -12,6 +12,7 @@ Plugin 'othree/jsdoc-syntax.vim'
 Plugin 'elzr/vim-json'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'raimondi/delimitmate'
@@ -73,6 +74,7 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='simple'
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
