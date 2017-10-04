@@ -1,0 +1,15 @@
+[user]
+	email = ryan.burness@sage.com
+	name = rburness
+[core]
+	autocrlf = input
+	editor = /usr/bin/vim
+[pull]
+    default = current
+[color]
+	ui = true
+[alias]
+    s = status -s
+    lg = log --oneline --decorate --all --graph
+[push]
+	default = current 
