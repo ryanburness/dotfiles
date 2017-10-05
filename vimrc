@@ -94,12 +94,25 @@ let g:indent_guides_guide_size = 1
 hi IndentGuidesOdd ctermbg=236
 hi IndentGuidesEven ctermbg=237
 
+" Map leader to ,
+map , \
+
+" Misc mappings
+nmap <leader>dd :call InsertDebugger()<CR>
 " ,. and ,/ to go between buffers
 nmap <leader>. :bp<enter>
 nmap <leader>/ :bn<enter>
-
 " Clear search buffer with return
 noremap <CR> :nohlsearch<cr>
 
 au BufNewFile,BufRead *.ui set filetype=ruby
 au BufNewFile,BufRead *.scss set filetype=css
+
+function! InsertDebugger()
+  if(&filetype == 'ruby')
+    :normal orequire 'pry'; binding.pry
+  else
+    :normal odebugger
+  endif
+  :normal ==
+endfunction
