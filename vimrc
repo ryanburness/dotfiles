@@ -54,6 +54,7 @@ set nobackup
 set noswapfile
 set showcmd         " Display incomplete commands
 set backspace=indent,eol,start
+set re=1
 
 highlight ExtraWhitespace ctermbg=red guibg=#262D51
 match ExtraWhitespace /\s\+$/
