@@ -25,6 +25,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-endwise'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,13 +57,13 @@ set showcmd         " Display incomplete commands
 set backspace=indent,eol,start
 set re=1
 
-highlight ExtraWhitespace ctermbg=red guibg=#262D51
-match ExtraWhitespace /\s\+$/
-
 " Theme settings
 set t_Co=256
 set background=dark
-colorscheme default 
+let g:solarized_termcolors=256
+colorscheme solarized
+highlight ExtraWhitespace ctermbg=red guibg=#262D51
+match ExtraWhitespace /\s\+$/
 
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
@@ -76,7 +77,7 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='simple'
+let g:airline_theme='solarized'
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
