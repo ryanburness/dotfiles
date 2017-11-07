@@ -26,6 +26,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -118,6 +119,9 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+" vim-jsx
+let g:jsx_ext_required = 0 " Enables JSX syntax highlighting for .js files
 
 " Map leader to ,
 map , \
