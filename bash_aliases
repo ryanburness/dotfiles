@@ -110,7 +110,8 @@ alias sbp='source ~/.bash_profile'
 alias vi='vim'
 alias vim="/usr/local/bin/vim"
 alias vimrc='vi ~/.vimrc'
-alias rungac="itermocil mso_gac"
+alias rungac="itermocil gateway_gac"
+alias msogac="itermocil mso_gac"
 alias rjw="bundle exec rake jobs:work"
 alias weather="curl http://wttr\.in/Newcastle_Upon_Tyne"
 
