@@ -224,3 +224,7 @@ MYSQL=/usr/local/Cellar/mysql@5.6/5.6.36_1/bin
 
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export ENVIRONMENT=development
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
