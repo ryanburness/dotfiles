@@ -23,6 +23,11 @@ alias l='ls -CF'
 alias ho='cd host_app'
 alias fd='function _fd(){ find . -name $1 -type d; };_fd'
 alias gac='cd ~/dev/sage_one_advanced'
+alias s1rs='cd ~/dev/s1_reporting_service'
+alias s1rw='cd ~/dev/s1_reporting_worker'
+alias s1rt='cd ~/dev/s1_reporting_test'
+alias s1rc='cd ~/dev/s1_reporting_service_client'
+alias s1gu='cd ~/dev/s1_gac_ui'
 
 # git
 alias g='git'
@@ -94,19 +99,27 @@ function rst {
    fi
  }
 
+# docker
+alias d='docker'
+alias portainer='docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer'
+
+# aws
+alias awslogin='`aws ecr get-login --no-include-email`'
+
 # misc
 alias ba='vi ~/.bash_aliases'
 alias bd='mysql -u root -p < ~/Documents/bump_dates.sql'
 alias guard='title GUARD ${PWD##*/}; be guard && wait $!; title Console'
 alias pha='ci/prepare_host_app.sh'
 alias pp='bash ~/dotfiles/pp.sh 7 https://data-provisioner.sageone.biz/deployment/extend?domain=jh-datauki-uat.sageone.biz'
-alias rn='function _rn(){ cd ~/development/sage_one_advanced/; renogen new "$1"; vi change_log/next/$1.yml; };_rn'
+alias rn='function _rn(){ cd ~/dev/sage_one_advanced/; renogen new "$1"; vi change_log/next/$1.yml; };_rn'
 alias rt='ext; renogen test'
 alias rv='function _rv(){ cd ~/development/sage_one_advanced/; rbenv local "$1"; gem install b; rbenv rehash; ./script/prepare_host_app.sh; };_rv'
 alias se="dev; sageone-env -t 'jh-datauki-uat.sageone.biz'"
 alias sr='dev; sageone-env -revert'
 alias bp='vi ~/.bash_profile'
 alias sbp='source ~/.bash_profile'
+alias hosts='sudo vi /etc/hosts'
 alias vi='vim'
 alias vim="/usr/local/bin/vim"
 alias vimrc='vi ~/.vimrc'
