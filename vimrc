@@ -12,7 +12,7 @@ Plugin 'othree/jsdoc-syntax.vim'
 Plugin 'elzr/vim-json'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'raimondi/delimitmate'
@@ -25,8 +25,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-endwise'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'mxw/vim-jsx'
+Plugin 'joshdick/onedark.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -61,8 +62,9 @@ set re=1
 " Theme settings
 set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+let g:onedark_termcolors=256
+colorscheme onedark
 highlight ExtraWhitespace ctermbg=red guibg=#262D51
 match ExtraWhitespace /\s\+$/
 
@@ -78,18 +80,13 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='solarized'
+let g:airline_theme='onedark'
 
 " CtrlP
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files'],
-        \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-        \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
-let g:ctrlp_extensions = ['line']
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " Indent Guides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -122,6 +119,10 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " vim-jsx
 let g:jsx_ext_required = 0 " Enables JSX syntax highlighting for .js files
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 
 " Map leader to ,
 map , \
