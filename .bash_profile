@@ -11,7 +11,7 @@ function parse_git_branch {
   diverge_pattern="Your branch and (.*) have diverged"
 
   if [[ ${git_status}} =~ ${staged_pattern} ]];     then state+="${YELLOW}*"; fi
-  if [[ ${git_status}} =~ ${unstaged_pattern} ]];   then state+="${GREEN}*"; fi
+  if [[ ${git_status}} =~ ${unstaged_pattern} ]];   then state+="${RED}*"; fi
   if [[ ${git_status}} =~ ${untracked_pattern} ]];  then state+="${CYAN}*"; fi
 
   if   [[ ${git_status} =~ ${ahead_pattern} ]];     then remote="${CYAN}↑"
@@ -20,11 +20,11 @@ function parse_git_branch {
 
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
-    echo "$YELLOW:$branch$remote$state"
+    echo "$YELLOW@$branch$remote$state"
   fi
 }
 function prompt_func() {
-  PS1="$GREEN\$(date +%H:%M:%S) \w$(parse_git_branch)$YELLOW\$ $NO_COLOUR"
+  PS1="$GREEN\$(date +%H:%M:%S) $CYAN\w$(parse_git_branch) $YELLOW\$ $NO_COLOUR"
 }
 PROMPT_COMMAND=prompt_func
 
