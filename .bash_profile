@@ -85,5 +85,3 @@ export DGC=true
 # mysql defaults
 export MYSQL_USERNAME='root'
 export MYSQL_PASSWORD='admin'
-
-eval "$(rbenv init -)"
