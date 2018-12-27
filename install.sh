@@ -17,13 +17,6 @@ doIt() {
     tic -o ~/.terminfo ~/.vim/xterm-256-color-italic.terminfo
   fi
 
-  read -p "Do you want to configure iTerm2? (y/n) " -n 1
-  echo
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "-- Configuring iTerm2..."
-    cp ./iterm-profile.json ~/Library/Application\ Support/iTerm2/DynamicProfiles
-  fi
-
   echo "-- Reloading bash profile..."
   source ~/.bash_profile
 
