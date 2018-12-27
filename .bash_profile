@@ -10,9 +10,9 @@ function parse_git_branch {
   untracked_pattern="Untracked files"
   diverge_pattern="Your branch and (.*) have diverged"
 
-  if [[ ${git_status}} =~ ${staged_pattern} ]];     then state+="${YELLOW}*"; fi
-  if [[ ${git_status}} =~ ${unstaged_pattern} ]];   then state+="${RED}*"; fi
-  if [[ ${git_status}} =~ ${untracked_pattern} ]];  then state+="${CYAN}*"; fi
+  if [[ ${git_status}} =~ ${staged_pattern} ]];     then state+="${GREEN}*"; fi
+  if [[ ${git_status}} =~ ${unstaged_pattern} ]];   then state+="${RED}*"
+  elif [[ ${git_status}} =~ ${untracked_pattern} ]];  then state+="${RED}*"; fi
 
   if   [[ ${git_status} =~ ${ahead_pattern} ]];     then remote="${CYAN}↑"
   elif [[ ${git_status} =~ ${behind_pattern} ]];    then remote="${CYAN}↓"
