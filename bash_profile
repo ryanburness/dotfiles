@@ -220,7 +220,7 @@ function docker_start() {
   eval "$(aws ecr get-login --region eu-west-1)"
 }
 
-MYSQL=/usr/local/Cellar/mysql@5.6/5.6.36_1/bin
+MYSQL=/usr/local/Cellar/mysql@5.7/5.7.24/bin
 
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
@@ -233,3 +233,4 @@ export S1_REPORTING_SERVICE_HOST=http://reporting.dev.sageone.com
 export S1_CSRF_KEY=XCSRFTOKEN
 export S1_AUTH_DOMAIN=dev.sageone.com
 export S1_NAMESPACE=development
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
