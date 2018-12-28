@@ -1,5 +1,6 @@
 # directories
 alias ..='cd ..'
+alias dotfiles='cd ~/dotfiles'
 alias dev='cd ~/Development'
 alias gac='cd ~/Development/sage_one_advanced'
 alias s1a='cd ~/Development/sage_one_addons'
