@@ -25,7 +25,7 @@ function parse_git_branch {
 
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
-    echo "$YELLOW@$branch$remote$state"
+    echo "$YELLOW:$branch$remote$state"
   fi
 }
 function prompt_func() {
