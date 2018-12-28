@@ -1,3 +1,8 @@
+# Bash aliases
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source "$DIR/.bash_aliases"
+
 # Bash prompt
 function parse_git_branch {
   git rev-parse --git-dir &> /dev/null
