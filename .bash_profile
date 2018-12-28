@@ -29,7 +29,7 @@ function parse_git_branch {
   fi
 }
 function prompt_func() {
-  PS1="$GREEN\$(date +%H:%M:%S) $CYAN\w$(parse_git_branch) $YELLOW\$ $NO_COLOUR"
+  PS1="$GREEN\$(date +%H:%M:%S) $PURPLE\h $CYAN\w$(parse_git_branch) $YELLOW\$ $NO_COLOUR"
 }
 PROMPT_COMMAND=prompt_func
 
