@@ -36,7 +36,7 @@ alias portainer='docker run -d -p 9000:9000 --restart always -v /var/run/docker.
 alias aws_login='`aws ecr get-login --no-include-email`'
 
 # Devmachine
-alias vm='ssh developer@devmachine'
-alias vmon='VBoxManage startvm s1_development_environment-2-2 --type headless'
-alias vmoff='VBoxManage controlvm  s1_development_environment-2-2 poweroff'
-alias vmrestart='VBoxManage controlvm  s1_development_environment-2-2 restart'
+alias dmssh='ssh developer@devmachine'
+alias dmon='VBoxManage startvm s1_development_environment-2-2 --type headless'
+alias dmoff='VBoxManage controlvm  s1_development_environment-2-2 poweroff'
+alias dmrestart='VBoxManage controlvm  s1_development_environment-2-2 restart'
