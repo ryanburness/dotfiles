@@ -19,6 +19,7 @@ doIt() {
 
   echo "-- Reloading bash profile..."
   source ~/.bash_profile
+  source ~/.bashrc
 
   echo "-- All done!"
 }
