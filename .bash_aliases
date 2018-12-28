@@ -33,3 +33,6 @@ alias portainer='docker run -d -p 9000:9000 --restart always -v /var/run/docker.
 
 # aws
 alias aws_login='`aws ecr get-login --no-include-email`'
+
+# Devmachine connections
+alias vm='ssh developer@devmachine'
