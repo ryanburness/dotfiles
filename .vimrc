@@ -59,6 +59,12 @@ set showcmd         " Display incomplete commands
 set backspace=indent,eol,start
 set re=1
 
+" Code folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
 " Theme settings
 set t_Co=256
 set background=dark
