@@ -11,6 +11,6 @@ alias s1gu='cd ~/Development/s1_gac_ui'
 
 # devmachine
 alias dmssh='ssh developer@devmachine'
-alias dmon='VBoxManage startvm s1_development_environment-2-2 --type headless'
-alias dmoff='VBoxManage controlvm  s1_development_environment-2-2 poweroff'
-alias dmrestart='VBoxManage controlvm  s1_development_environment-2-2 restart'
+alias dmon='VBoxManage startvm s1_development_environment --type headless'
+alias dmoff='VBoxManage controlvm  s1_development_environment poweroff'
+alias dmrestart='VBoxManage controlvm  s1_development_environment restart'
