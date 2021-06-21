@@ -1,3 +1,6 @@
 # directories
 alias sciadmin='cd /c/dev/Sage/sci_admin'
 alias slcs2='cd /c/dev/Sage/slcs2'
+alias tf='cd /c/dev/Sage/trustfabric'
+alias npi='cd /c/dev/Sage/network-payroll-integration'
+alias ds='cd /c/dev/Sage/fabric-directory-service'
